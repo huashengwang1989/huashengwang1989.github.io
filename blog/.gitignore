@@ -5,7 +5,6 @@ db.json
 node_modules/
 public/
 .deploy*/
-source/
 themes/landscape/
 scaffolds/
-_config.yml
+_posts

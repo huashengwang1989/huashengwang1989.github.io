@@ -1,0 +1,32 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+
+# Read More text
+excerpt_link: Read More
+
+
+sidebar: left
+# Widgets List
+widgets:
+ - about
+ - menu
+ - tagcloud
+
+# hexo-renderer-scss
+node_sass:
+  debug: false
+  outputStyle: nested
+  precision: 5
+  sourceComments: false
+
+
+#about
+about:
+  profileURL: '/images/profile.png'
+  location: 'Singapore'
+
+#social
+social:
+  github: 'https://github.com/huashengwang1989/'
