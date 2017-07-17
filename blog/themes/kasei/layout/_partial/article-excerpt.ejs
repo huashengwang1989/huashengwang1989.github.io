@@ -1,0 +1,37 @@
+<div class="blog-post">
+    <!-- Title -->
+    <div class="blog-header">
+      <h2 class="blog-post-title">
+          <a href="<%- config.root %><%- item.path %>">
+              <%- item.title %>
+          </a>
+      </h2>
+      <!-- Date and Author -->
+      <div class="blog-post-meta">
+          <span class="blog-date"><%= item.date.format(config.date_format) %></span>
+          <% if(item.author) { %>
+            <span class="blog-author">by <span class="author-name"><%- item.author %></span></span>
+          <% } %>
+      </div>
+      <div class="blog-post-additional">
+          <span class="blog-tags"><%- partial('article-tags', {item: item}) %></span>
+          <span class="blog-cats"><%- partial('article-categories', {item: item}) %></span>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="blog-content-wrapper">
+        <div class="blog-content">
+        <%- item.excerpt || item.content %>
+        <!-- Only display the Read More link if we are displaying an excerpt -->
+        <% if(item.excerpt) { %>
+            <span class="read-more">
+                <a href="<%- config.root %><%- item.path %>">
+                    <%= theme.excerpt_link %>
+                </a>
+            </span>
+        <% } %>
+      </div>
+    </div>
+
+</div>

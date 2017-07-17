@@ -1,0 +1,39 @@
+
+<%
+    var title = '';
+    if (page.category) title = page.category;
+    if (page.tag) title = page.tag;
+    if (page.archive){
+        if (page.year) {
+          title = page.year + (page.month ? '/' + page.month : '');
+        }else{
+          title = "Archives";
+        }
+    }
+%>
+<% if(title) { %>
+   <h2 class="collection-title"><%- title %></h2>
+<% } %>
+
+<% var last;
+   page.posts.each(function(post){
+     var year = post.date.year();
+     if (last !== year){
+       if (!!last){ %>
+       </div></section>
+      <% }
+       last = year; %>
+       <section class="archives-wrap">
+         <div class="archive-year-wrap">
+           <div class="year-wrap">
+             <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
+           </div>
+         </div>
+         <div class="timeline">
+           <div class="timeline-head"></div>
+           <div class="timeline-tail"></div>
+         </div>
+         <div class="archives">
+      <% } %>
+        <%- partial('_partial/article-archive', {item: post}) %>
+      <% }); %>

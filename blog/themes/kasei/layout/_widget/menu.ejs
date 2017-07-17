@@ -1,0 +1,15 @@
+
+    <div class="widget-wrapper menu-widget">
+
+        <div class="widget-container">
+          <div class="menu-wrapper">
+            <nav class="nav">
+                <% for (var menu in theme.menu){ %>
+                    <div class="nav-item">
+                      <a href="<%- url_for(theme.menu[menu]) %>"><%= menu %></a>
+                    </div>
+                <% } %>
+            </nav>
+          </div>
+         </div>
+    </div>
