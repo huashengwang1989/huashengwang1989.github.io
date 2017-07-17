@@ -1,0 +1,52 @@
+<html>
+<!-- Head tag -->
+  <%- partial('_partial/head') %>
+
+  <body>
+
+      <!-- Menu -->
+
+
+
+      <div id="wrapper">
+        <div id="container">
+            <!-- Sidebar -->
+          <div id="sidebar-wrapper">
+              <%- partial('_partial/sidebar' , null, {cache: !config.relative_link} ) %>
+          </div>
+
+
+          <div id="page-container-wrapper">
+
+            <div id="page-container">
+                <!-- Blog Header: title and subtitle -->
+                <div id="header-wrapper">
+                  <%- partial('_partial/header', null, {cache: !config.relative_link} ) %>
+                </div>
+                <!-- Main Content -->
+                <div id="page-content-wrapper">
+                  <div class="page-content">
+                      <div class="row">
+                          <div class="blog-entry">
+                              <%- body %>
+                          </div>
+                       </div>
+                    </div>
+                </div>
+
+              </div>
+
+              <!-- Footer -->
+              <%- partial('_partial/footer' , null, {cache: !config.relative_link}) %>
+              <!-- After footer scripts -->
+              <%- partial('_partial/after-footer' , null, {cache: !config.relative_link}) %>
+
+
+            </div>
+          </div>
+
+      </div>
+
+  </body>
+
+</html>

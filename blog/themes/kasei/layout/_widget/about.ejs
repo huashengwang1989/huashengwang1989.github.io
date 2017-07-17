@@ -1,0 +1,24 @@
+
+    <div class="widget-wrapper about-widget">
+
+        <div class="widget-container">
+          <div class="profile-wrapper">
+            <div class="profile-image">
+              <img src = '<%= theme.about.profileURL %>' alt = "profile picture">
+            </div>
+          </div>
+           <p class="description"><%= config.description %></p>
+           <hr>
+           <div class="location-wrapper">
+             <p class="location"><span class="glyphicon glyphicon-map-marker"></span> <%= theme.about.location %></p>
+           </div>
+           <hr>
+           <div class="social-wrapper">
+             <% if (!!theme.social.github){%>
+             <a href="<%= theme.social.github %>" target="_blank">
+              <svg class="glyphicon glyphicon-ant-github" alt="GitHub Icon" ><use xlink:href="/icon/ant-design.svg#si-ant-github"></use></svg>
+            </a>
+            <%}%>
+           </div>
+         </div>
+    </div>

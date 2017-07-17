@@ -1,0 +1,6 @@
+<div class="sidebar-module sidebar-widgets">
+  <% theme.widgets.forEach(function(widget){ %>
+    <% console.log ('_widget/'+widget) %>
+    <%- partial('_widget/' + widget) %>
+  <% }) %>
+</div>

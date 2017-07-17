@@ -1,0 +1,21 @@
+<div class="blog-post post-archive">
+    <!-- Title -->
+    <div class="blog-header">
+      <span class="blog-post-title">
+          <a href="<%- config.root %><%- item.path %>">
+              <%- item.title %>
+          </a>
+      </span>
+      <!-- Date and Author -->
+      <div class="blog-post-meta">
+          <span class="blog-date"><%= item.date.format(config.date_format) %></span>
+          <% if(item.author) { %>
+            <span class="blog-author">by <span class="author-name"><%- item.author %></span></span>
+          <% } %>
+      </div>
+      <div class="blog-post-additional">
+          <span class="blog-tags"><%- partial('article-tags', {item: item}) %></span>
+          <span class="blog-cats"><%- partial('article-categories', {item: item}) %></span>
+      </div>
+    </div>
+  </div>
