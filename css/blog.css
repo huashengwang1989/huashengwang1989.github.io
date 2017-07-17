@@ -15,6 +15,13 @@
     opacity: 1;
     filter: alpha(opacity=100); } }
 
+@font-face {
+  font-family: 'antDesignFont';
+  src: url("webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("webfont.eot?#iefix") format("embedded-opentype"), url("webfont.woff2") format("woff2"), url("webfont.woff") format("woff"), url("webfont.ttf") format("truetype"), url("webfont.svg#svgFontName") format("svg");
+  /* Legacy iOS */ }
+
 /*
 $color-black: #272727;
 $color-gray: #747474;
@@ -234,6 +241,17 @@ h6, .h6 {
       .widget-wrapper.about-widget .location-wrapper p.location .glyphicon {
         margin-right: 6px;
         color: #E85A4F; }
+    .widget-wrapper.about-widget .social-wrapper .glyphicon {
+      width: 24px;
+      height: 24px;
+      color: #8E8D8A;
+      fill: currentColor; }
+      .widget-wrapper.about-widget .social-wrapper .glyphicon:hover {
+        color: #E98074;
+        fill: currentColor; }
+      .widget-wrapper.about-widget .social-wrapper .glyphicon:active {
+        color: #E85A4F;
+        fill: currentColor; }
 
 .archives-wrap {
   display: flex;
