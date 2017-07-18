@@ -4,4 +4,6 @@ A test [GitHub Pages Blog](https://huashengwang1989.github.io "カセイちゃ�
 ## Kasei Theme
 Kasei theme is built based on [Bootstrap](http://getbootstrap.com).
 Please see the blog folder for the theme.
-Currently the theme has not been optimized for mobile.
+
+### Updated 2017.7.18
+Optimized for mobile.
