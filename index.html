@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <meta name="description" content="">
     <meta name="author" content="">
@@ -54,6 +54,72 @@
 
 
   <body>
+      <div id="mobile-hidden-panel" class="collapse">
+        <div class="hidden-pannel-wrapper">
+            <div class="sidebar-module sidebar-widgets">
+  
+    
+    
+    <div class="widget-wrapper about-widget">
+
+        <div class="widget-container">
+          <div class="flex-item-wrapper">
+            <div class="profile-wrapper">
+              <div class="profile-image">
+                <img src = '/images/profile.png' alt = "profile picture">
+              </div>
+            </div>
+          </div>
+          <div class="flex-item-wrapper">
+            <p class="description">我が名はカセイ</p>
+            <hr>
+           <div class="location-wrapper">
+             <p class="location"><span class="glyphicon glyphicon-map-marker"></span> Singapore</p>
+           </div>
+           <hr>
+           <div class="social-wrapper">
+             
+             <a href="https://github.com/huashengwang1989/" target="_blank">
+              <svg class="glyphicon glyphicon-ant-github" alt="GitHub Icon" ><use xlink:href="/icon/ant-design.svg#si-ant-github"></use></svg>
+            </a>
+            
+           </div>
+         </div>
+       </div>
+
+    </div>
+
+  
+    
+    
+    <div class="widget-wrapper menu-widget">
+
+        <div class="widget-container">
+          <div class="menu-wrapper">
+            <nav class="nav">
+                
+                    <div class="nav-item">
+                      <a href="/">Home</a>
+                    </div>
+                
+                    <div class="nav-item">
+                      <a href="/archives">Archives</a>
+                    </div>
+                
+            </nav>
+          </div>
+         </div>
+    </div>
+
+  
+    
+    
+
+  
+</div>
+
+        </div>
+      </div>
       <div id="wrapper">
         <div id="mobile-header-wrapper">
           <nav class="header-nav">
@@ -79,7 +145,9 @@
 
   <div class="nav-profile-wrapper">
     <div class="nav-profile-image">
-      <img src = '/images/profile.png' alt = "profile picture">
+      <button type="button" class="nav-profile-toggle-button" data-toggle="collapse" data-target="#mobile-hidden-panel">
+        <img src = '/images/profile.png' alt = "profile picture">
+      </button>
     </div>
   </div>
 </nav>
@@ -97,13 +165,16 @@
     <div class="widget-wrapper about-widget">
 
         <div class="widget-container">
-          <div class="profile-wrapper">
-            <div class="profile-image">
-              <img src = '/images/profile.png' alt = "profile picture">
+          <div class="flex-item-wrapper">
+            <div class="profile-wrapper">
+              <div class="profile-image">
+                <img src = '/images/profile.png' alt = "profile picture">
+              </div>
             </div>
           </div>
-           <p class="description">我が名はカセイ</p>
-           <hr>
+          <div class="flex-item-wrapper">
+            <p class="description">我が名はカセイ</p>
+            <hr>
            <div class="location-wrapper">
              <p class="location"><span class="glyphicon glyphicon-map-marker"></span> Singapore</p>
            </div>
@@ -116,6 +187,8 @@
 
            </div>
          </div>
+       </div>
+
     </div>
 
 
