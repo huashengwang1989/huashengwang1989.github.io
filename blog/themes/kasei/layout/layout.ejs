@@ -6,6 +6,11 @@
 
 
   <body>
+      <div id="mobile-hidden-panel" class="collapse">
+        <div class="hidden-pannel-wrapper">
+            <%- partial('_partial/sidebar' , null, {cache: !config.relative_link} ) %>
+        </div>
+      </div>
       <div id="wrapper">
         <div id="mobile-header-wrapper">
           <%- partial('_partial/mobile-header' , null, {cache: !config.relative_link} ) %>

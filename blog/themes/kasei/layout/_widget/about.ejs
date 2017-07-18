@@ -2,13 +2,16 @@
     <div class="widget-wrapper about-widget">
 
         <div class="widget-container">
-          <div class="profile-wrapper">
-            <div class="profile-image">
-              <img src = '<%= theme.about.profileURL %>' alt = "profile picture">
+          <div class="flex-item-wrapper">
+            <div class="profile-wrapper">
+              <div class="profile-image">
+                <img src = '<%= theme.about.profileURL %>' alt = "profile picture">
+              </div>
             </div>
           </div>
-           <p class="description"><%= config.description %></p>
-           <hr>
+          <div class="flex-item-wrapper">
+            <p class="description"><%= config.description %></p>
+            <hr>
            <div class="location-wrapper">
              <p class="location"><span class="glyphicon glyphicon-map-marker"></span> <%= theme.about.location %></p>
            </div>
@@ -21,4 +24,6 @@
             <%}%>
            </div>
          </div>
+       </div>
+
     </div>

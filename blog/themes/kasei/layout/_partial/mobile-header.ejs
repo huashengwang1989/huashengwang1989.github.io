@@ -2,7 +2,9 @@
   <%- partial('_widget/menu') %>
   <div class="nav-profile-wrapper">
     <div class="nav-profile-image">
-      <img src = '<%= theme.about.profileURL %>' alt = "profile picture">
+      <button type="button" class="nav-profile-toggle-button" data-toggle="collapse" data-target="#mobile-hidden-panel">
+        <img src = '<%= theme.about.profileURL %>' alt = "profile picture">
+      </button>
     </div>
   </div>
 </nav>
