@@ -2,15 +2,18 @@
 <!-- Head tag -->
   <%- partial('_partial/head') %>
 
+<!-- get screen size -->
+
+
   <body>
-
-      <!-- Menu -->
-
-
-
       <div id="wrapper">
+        <div id="mobile-header-wrapper">
+          <%- partial('_partial/mobile-header' , null, {cache: !config.relative_link} ) %>
+        </div>
         <div id="container">
+
             <!-- Sidebar -->
+
           <div id="sidebar-wrapper">
               <%- partial('_partial/sidebar' , null, {cache: !config.relative_link} ) %>
           </div>
@@ -23,6 +26,7 @@
                 <div id="header-wrapper">
                   <%- partial('_partial/header', null, {cache: !config.relative_link} ) %>
                 </div>
+
                 <!-- Main Content -->
                 <div id="page-content-wrapper">
                   <div class="page-content">
