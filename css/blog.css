@@ -49,6 +49,9 @@ h6, .h6 {
   font-weight: normal;
   color: #333; }
 
+figure.highlight .code .line, figure.highlight .gutter .line {
+  height: 18px; }
+
 /*
  * Override Bootstrap's default container.
  */
