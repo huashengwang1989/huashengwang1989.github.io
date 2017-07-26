@@ -75,7 +75,13 @@ h6, .h6 {
     color: #333;
 }
 
-
+figure.highlight{
+  .code, .gutter{
+    .line{
+      height: 18px;
+    }
+  }
+}
 
 /*
  * Override Bootstrap's default container.
