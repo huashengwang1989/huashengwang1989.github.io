@@ -53,7 +53,10 @@ figure.highlight {
   overflow-x: scroll; }
   figure.highlight .code .line, figure.highlight .gutter .line {
     height: 18px;
-    tab-size: 1em; }
+    tab-size: 1em;
+    tab-size: 2;
+    -moz-tab-size: 2;
+    -o-tab-size: 2; }
 
 @media screen and (max-width: 600px) {
   figure.highlight .line {
