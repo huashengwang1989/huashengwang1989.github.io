@@ -2,7 +2,6 @@ Thumbs.db
 .DS_Store
 db.json
 debug.log
-index.html
 node_modules/
 public/
 .deploy/
