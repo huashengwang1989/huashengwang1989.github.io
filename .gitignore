@@ -12,3 +12,14 @@ categories/
 css/
 fancybox/
 tags/
+bootstrap/
+images/
+js/
+favicon/
+icon/
+!themes/kasei/
+!themes/kasei/source/bootstrap/
+!blog/themes/kasei/source/css/
+!blog/themes/kasei/source/icon/
+!blog/themes/kasei/source/js/
+!blog/themes/kasei/source/favicon/
