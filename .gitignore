@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+db.json
+debug.log
+node_modules/
+public/
+.deploy/
+themes/
+2017/
+archives/
+categories/
+css/
+fancybox/
+index.html
+tags/

@@ -175,6 +175,10 @@ figure.highlight {
                 #wrapper #container #page-container-wrapper #page-container #page-content-wrapper .blog-entry .blog-post .blog-header .blog-post-additional .blog-tags {
                   display: inline-block;
                   margin: 0 6px; }
+                  #wrapper #container #page-container-wrapper #page-container #page-content-wrapper .blog-entry .blog-post .blog-header .blog-post-additional .blog-tags .blog-tags-container a:after {
+                    content: ', '; }
+                  #wrapper #container #page-container-wrapper #page-container #page-content-wrapper .blog-entry .blog-post .blog-header .blog-post-additional .blog-tags .blog-tags-container a:last-of-type:after {
+                    content: none; }
                 #wrapper #container #page-container-wrapper #page-container #page-content-wrapper .blog-entry .blog-post .blog-header .blog-post-additional .blog-cats {
                   display: inline-block;
                   margin: 0 6px; }

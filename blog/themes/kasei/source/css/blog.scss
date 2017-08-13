@@ -244,6 +244,16 @@ figure.highlight{
                     .blog-tags{
                       display: inline-block;
                       margin: 0 6px;
+                      .blog-tags-container{
+                        a{
+                          &:after{
+                            content: ', ';
+                          }
+                          &:last-of-type:after{
+                            content: none;
+                          }
+                        }
+                      }
                     }
                     .blog-cats{
                       display: inline-block;
