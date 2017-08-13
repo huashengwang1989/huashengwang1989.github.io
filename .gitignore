@@ -1,15 +1,14 @@
-.DS_Store
 Thumbs.db
+.DS_Store
 db.json
 debug.log
+index.html
 node_modules/
 public/
 .deploy/
-themes/
 2017/
 archives/
 categories/
 css/
 fancybox/
-index.html
 tags/
