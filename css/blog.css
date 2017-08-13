@@ -282,6 +282,7 @@ figure.highlight {
 
 .archives-wrap {
   display: flex;
+  width: 100%;
   margin-bottom: 36px;
   padding-left: 16px; }
   .archives-wrap .archive-year-wrap {
@@ -306,7 +307,7 @@ figure.highlight {
       position: absolute;
       left: 6px; }
   .archives-wrap .archives {
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     padding-left: 24px; }
 
 /*
