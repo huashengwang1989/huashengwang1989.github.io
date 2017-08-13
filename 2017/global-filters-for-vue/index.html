@@ -268,91 +268,95 @@
     <div class="blog-content-wrapper">
         <div class="blog-content">
         <p>It is very convenient to use filters in Vue. Custom filters can be defined in the <code>filters</code>, as below in the <code>export default</code> of a Vue single file component:</p>
-<pre><code>export default{
-    data () {
-        return {
-        }
-    },
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">default</span><span class="token punctuation">{</span>
+    data <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-    filters: {
-        //my filters
-    },
+    filters<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//my filters</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-    methods: {
-    },
-}
-</code></pre><a id="more"></a>
+    methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<a id="more"></a>
 <p>However, <code>filters</code> defined in this way can only be easily accessible by the component containing these filters (<em>i.e.</em>, in the same .vue file). In many cases, we would like to have some filters available globally to be used by all Vue components inside this project. (And also, I do not wish to write <code>import myFilters from xxx</code> inside every Vue component.)</p>
 <p>In short, I would like to create a single <code>filters.js</code> file to host all my filters, ideally with a similar structure to the familiar Vue single file component, and then import it into <code>main.js</code> .</p>
 <p>It is easy to create a custom filter with the <code>Vue.filter()</code> method. The following post in the Vue Forum has provided a simple solution:<br><a href="https://forum.vuejs.org/t/custom-filters-organization/3738/3" target="_blank" rel="external">Custom filters organization - Vue Forum</a></p>
-<pre><code>export default{
-    create: function(Vue) {
-        Object.keys(this.filters).forEach(function (filter,k){
-            Vue.filter(filter, this.filters[filter])
-        }.bind(this));
-    },
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">default</span><span class="token punctuation">{</span>
+    create<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>Vue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>filters<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>filter<span class="token punctuation">,</span>k<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            Vue<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>filter<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>filters<span class="token punctuation">[</span>filter<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-    filters: {
-        filterBar: function (val) {
-            return &#39;Bar_&#39; + val
-        },
-        filterFoo: function (val) {
-            return &#39;Foo_&#39; + val
-        },
-    },
+    filters<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        filterBar<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token string">'Bar_'</span> <span class="token operator">+</span> val
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        filterFoo<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token string">'Foo_'</span> <span class="token operator">+</span> val
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-}
-</code></pre><p>Inside <code>main.js</code>:</p>
-<pre><code>//import filters
-import filters from &#39;yourLocation/filters.js&#39;
-filters.create (Vue);
-</code></pre><p>Please be noted that the <code>.bind(this)</code> is necessary for the function inside the <code>forEach</code> loop, and with <code>.bind(this)</code>,  <code>this</code> will be pointed to the Vue component that has called these filters. However,  <code>this</code> will no longer be usable by filter functions to call data or methods, even they are in the same file. To solve this problem, we have to record <code>this</code> inside the <code>create</code> function:</p>
-<pre><code>var _this = this;
-var _methods = {};
-var _data = {};
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Inside <code>main.js</code>:</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//import filters</span>
+<span class="token keyword">import</span> filters <span class="token keyword">from</span> <span class="token string">'yourLocation/filters.js'</span>
+filters<span class="token punctuation">.</span>create <span class="token punctuation">(</span>Vue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>Please be noted that the <code>.bind(this)</code> is necessary for the function inside the <code>forEach</code> loop, and with <code>.bind(this)</code>,  <code>this</code> will be pointed to the Vue component that has called these filters. However,  <code>this</code> will no longer be usable by filter functions to call data or methods, even they are in the same file. To solve this problem, we have to record <code>this</code> inside the <code>create</code> function:</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> _methods <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> _data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-export default{
+<span class="token keyword">export</span> <span class="token keyword">default</span><span class="token punctuation">{</span>
 
-    create: function(Vue) {
+    create<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>Vue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-        Object.keys(this.filters).forEach(function (filter,k){
-            Vue.filter(filter, this.filters[filter])
-        }.bind(this));
+        Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>filters<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>filter<span class="token punctuation">,</span>k<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            Vue<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>filter<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>filters<span class="token punctuation">[</span>filter<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        _this = this;
-        _methods = this.methods;
-        _data = this.data();
+        _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        _methods <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>methods<span class="token punctuation">;</span>
+        _data <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    },
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-    data () {
-        return {
-            strBar : &#39;Bar_&#39;,
-            strFoo : &#39;Foo_&#39;,
-        }
-    },
+    data <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+            strBar <span class="token punctuation">:</span> <span class="token string">'Bar_'</span><span class="token punctuation">,</span>
+            strFoo <span class="token punctuation">:</span> <span class="token string">'Foo_'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-    filters: {
+    filters<span class="token punctuation">:</span> <span class="token punctuation">{</span>
 
-        filterBar: function (val) {
-            return _methods.foobar(_data.strBar , val)
-        },
+        filterBar<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> _methods<span class="token punctuation">.</span><span class="token function">foobar</span><span class="token punctuation">(</span>_data<span class="token punctuation">.</span>strBar <span class="token punctuation">,</span> val<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-        filterFoo: function (val) {
-            return _methods.foobar(_data.strFoo , val)
-        },
+        filterFoo<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> _methods<span class="token punctuation">.</span><span class="token function">foobar</span><span class="token punctuation">(</span>_data<span class="token punctuation">.</span>strFoo <span class="token punctuation">,</span> val<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-    },
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-    methods: {
+    methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
 
-        foobar (a, b){
-            return a + b;
-        }
+        foobar <span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
-    },
-},
-</code></pre><p>Now, we can use <code>_this</code>, <code>_methods</code>, <code>_data</code> to write our filter functions.</p>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Now, we can use <code>_this</code>, <code>_methods</code>, <code>_data</code> to write our filter functions.</p>
 
       </div>
     </div>
