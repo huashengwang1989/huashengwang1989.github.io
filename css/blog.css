@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  * Globals
  */
@@ -187,15 +188,15 @@ figure.highlight {
               #wrapper #container #page-container-wrapper #page-container #page-content-wrapper .blog-entry .blog-post .blog-content-wrapper h2 {
                 font-size: 32px;
                 color: #E85A4F;
-                margin: 28px 0 16px 0; }
+                margin: 32px 0 16px 0; }
               #wrapper #container #page-container-wrapper #page-container #page-content-wrapper .blog-entry .blog-post .blog-content-wrapper h3 {
                 font-size: 24px;
                 color: #E85A4F;
-                margin: 24px 0 12px 0; }
+                margin: 32px 0 12px 0; }
               #wrapper #container #page-container-wrapper #page-container #page-content-wrapper .blog-entry .blog-post .blog-content-wrapper h4 {
                 font-size: 18px;
                 color: #E98074;
-                margin: 16px 0 8px 0; }
+                margin: 24px 0 8px 0; }
             #wrapper #container #page-container-wrapper #page-container #page-content-wrapper .blog-entry .blog-post.full-article .blog-header {
               padding: 6px;
               border-left: none; }
@@ -322,6 +323,9 @@ figure.highlight {
 .blog-footer p:last-child {
   margin-bottom: 0; }
 
+.blog-content > *:first-child {
+  margin-top: 0; }
+
 .blog-content a, .blog-content a:link, .blog-content a:visited {
   color: #E85A4F; }
 
@@ -332,8 +336,34 @@ figure.highlight {
   animation-duration: 0.2s;
   animation-timing-function: ease-in; }
 
+.blog-content pre {
+  -webkit-overflow-scrolling: touch; }
+
 .blog-content img {
   max-width: 100%; }
+
+.blog-content ul {
+  list-style-type: none;
+  padding-left: 3px; }
+  .blog-content ul li {
+    padding-left: 16px; }
+    .blog-content ul li:before {
+      content: "•";
+      padding-right: 12px;
+      color: #E98074;
+      margin-left: -20px;
+      float: left; }
+
+.blog-content ol {
+  padding-left: 15px; }
+
+.blog-content ul, .blog-content ol {
+  margin-top: 8px;
+  margin-bottom: 8px; }
+  .blog-content ul li, .blog-content ol li {
+    margin-bottom: 4px; }
+    .blog-content ul li:last-child, .blog-content ol li:last-child {
+      margin-bottom: 0; }
 
 figure.highlight {
   margin: 12px 0 16px 0; }
