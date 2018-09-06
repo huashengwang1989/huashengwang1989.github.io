@@ -21,6 +21,13 @@ node_sass:
   precision: 5
   sourceComments: false
 
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'default'
+  line_number: true
+
+highlight:
+  enable: false
 
 #about
 about:
