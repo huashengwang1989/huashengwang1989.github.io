@@ -245,6 +245,53 @@
     <!-- Title -->
     <div class="blog-header">
       <h2 class="blog-post-title">
+          <a href="/2018/debugging-mocha-setup-for-vue-project/">
+              Debugging Mocha Setup for Vue Project
+          </a>
+      </h2>
+      <!-- Date and Author -->
+      <div class="blog-post-meta">
+          <span class="blog-date">2018-09-08</span>
+          
+      </div>
+      <div class="blog-post-additional">
+          <span class="blog-tags">
+</span>
+          <span class="blog-cats">
+</span>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="blog-content-wrapper">
+        <div class="blog-content">
+        <p>I am working on a Vue project with Webpack 4 and Babel 7.</p>
+<p>At the point of writing this post, it is Webpack 4.12.0 and Babel 7.0.0-rc.1.</p>
+<p>When setting up Mocha with <code>@vue/test-util</code>, I have encountered a number of bugs.</p>
+<p>After a number of rounds try, my test script in <code>package.json</code> becomes:</p>
+<pre><code>&quot;scripts&quot;: {
+    &quot;test&quot;: &quot;cross-env NODE_ENV=test nyc mocha-webpack --full-trace --recursive --require @babel/register --require ignore-styles --require test/setup.js test/**/*.spec.js&quot;
+}
+</code></pre><p>Is it necessary or overkill? Will all the additional flags be the solution to problems, or the cause of new errors?</p>
+<p>Probably yes.</p>
+        <!-- Only display the Read More link if we are displaying an excerpt -->
+        
+            <span class="read-more">
+                <a href="/2018/debugging-mocha-setup-for-vue-project/">
+                    Read More
+                </a>
+            </span>
+        
+      </div>
+    </div>
+
+</div>
+
+
+    <div class="blog-post">
+    <!-- Title -->
+    <div class="blog-header">
+      <h2 class="blog-post-title">
           <a href="/2018/styles-consolidation-among-iview-less-scss-in-vue-templates-and-javascript/">
               Styles Consolidation Among iView Less, Scss in Vue Templates and JavaScript
           </a>
