@@ -69,7 +69,7 @@ figure.highlight {
 
 /*
  * Override Bootstrap's default container.
- */
+*/
 #wrapper {
   transition: all 0.4s ease 0s;
   width: 100%;
@@ -127,6 +127,13 @@ figure.highlight {
             color: #8E8D8A; }
         #wrapper #container #page-container-wrapper #page-container #page-content-wrapper {
           padding: 12px 24px; }
+          #wrapper #container #page-container-wrapper #page-container #page-content-wrapper code {
+            background: #f8f8f8;
+            margin: 1px;
+            color: #755; }
+          #wrapper #container #page-container-wrapper #page-container #page-content-wrapper pre code {
+            color: unset;
+            background: unset; }
           #wrapper #container #page-container-wrapper #page-container #page-content-wrapper .blog-entry .collection-title {
             padding-bottom: 6px;
             font-family: roboto, "Helvetica Neue", Helvetica, a-otf-jun-pro, Arial, sans-serif;
@@ -189,14 +196,20 @@ figure.highlight {
                 font-size: 32px;
                 color: #E85A4F;
                 margin: 32px 0 16px 0; }
+                #wrapper #container #page-container-wrapper #page-container #page-content-wrapper .blog-entry .blog-post .blog-content-wrapper h2 code {
+                  color: #F95A4F; }
               #wrapper #container #page-container-wrapper #page-container #page-content-wrapper .blog-entry .blog-post .blog-content-wrapper h3 {
                 font-size: 24px;
                 color: #E85A4F;
                 margin: 32px 0 12px 0; }
+                #wrapper #container #page-container-wrapper #page-container #page-content-wrapper .blog-entry .blog-post .blog-content-wrapper h3 code {
+                  color: #F95A4F; }
               #wrapper #container #page-container-wrapper #page-container #page-content-wrapper .blog-entry .blog-post .blog-content-wrapper h4 {
                 font-size: 18px;
                 color: #E98074;
                 margin: 24px 0 8px 0; }
+                #wrapper #container #page-container-wrapper #page-container #page-content-wrapper .blog-entry .blog-post .blog-content-wrapper h4 code {
+                  color: #FA8074; }
             #wrapper #container #page-container-wrapper #page-container #page-content-wrapper .blog-entry .blog-post.full-article .blog-header {
               padding: 6px;
               border-left: none; }

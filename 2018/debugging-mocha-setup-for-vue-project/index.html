@@ -329,7 +329,7 @@ SyntaxError: Unexpected token import
                                                                 ^^^^^^
 
 SyntaxError: Unexpected token import
-</code></pre><p>This would need specify the <code>modules</code> as <code>&quot;commonjs&quot;</code> in <code>babelrc</code> or <code>babel.config.js</code>:</p>
+</code></pre><p>This would need specify the <code>modules</code> as <code>&quot;commonjs&quot;</code> in <code>.babelrc</code> or <code>babel.config.js</code>:</p>
 <pre><code>&quot;env&quot;:{
     &quot;test&quot;: {
         &quot;presets&quot;: {
@@ -377,7 +377,7 @@ SyntaxError: Unexpected token &lt;
 </li>
 <li><p>I should not have an additional <code>--require</code> flag before <code>test/**/*.spec.js</code> in the test script.</p>
 </li>
-<li><p><code>--require @babel/register</code> seems not necessary for my case. However if it is included, make sure the <code>module</code> is specified as <code>&quot;commonjs&quot;</code> in <code>babelrc</code> or <code>babel.config.js</code>, or <code>@babel/plugin-transform-modules-commonjs</code> is included as one of the plugins for test <code>env</code>.</p>
+<li><p><code>--require @babel/register</code> seems not necessary for my case. However if it is included, make sure the <code>module</code> is specified as <code>&quot;commonjs&quot;</code> in <code>.babelrc</code> or <code>babel.config.js</code>, or <code>@babel/plugin-transform-modules-commonjs</code> is included as one of the plugins for test <code>env</code>.</p>
 </li>
 </ul>
 
