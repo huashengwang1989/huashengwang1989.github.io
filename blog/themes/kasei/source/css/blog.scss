@@ -46,6 +46,11 @@ $color-gray: #8E8D8A;
 $color-light-red: #E98074;
 $color-red: #E85A4F;
 $color-black: #272727;
+$color-light-bg: #f8f8f8;
+
+$color-code: #755;
+$color-code-heading: #F95A4F;
+$color-light-code-heading: #FA8074;
 
 $box-shadow: 1px 1px 5px 0px rgba(39,39,39,0.3);
 
@@ -106,7 +111,7 @@ figure.highlight{
 
 /*
  * Override Bootstrap's default container.
- */
+*/
 
  #wrapper {
    transition: all 0.4s ease 0s;
@@ -180,8 +185,20 @@ figure.highlight{
          #page-content-wrapper {
             padding: 12px 24px;
 
-            .blog-entry{
+            code{
+              background: $color-light-bg;
+              margin: 1px;
+              color: $color-code;
+            }
 
+            pre{
+              code{
+                color: unset;
+                background: unset;
+              }
+            }
+
+            .blog-entry{
               .collection-title{
                 padding-bottom: 6px;
                 font-family: $font-stack;
@@ -269,18 +286,27 @@ figure.highlight{
                     font-size: 32px;
                     color: $color-red;
                     margin: 32px 0 16px 0;
+                    code{
+                      color: $color-code-heading;
+                    }
                   }
 
                   h3{
                     font-size: 24px;
                     color: $color-red;
-                    margin: 32px 0 12px 0 ;
+                    margin: 32px 0 12px 0;
+                    code{
+                      color: $color-code-heading;
+                    }
                   }
 
                   h4{
                     font-size: 18px;
                     color: $color-light-red;
-                    margin: 24px 0 8px 0 ;
+                    margin: 24px 0 8px 0;
+                    code{
+                      color: $color-light-code-heading;
+                    }
                   }
                 }
 
