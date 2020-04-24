@@ -241,14 +241,30 @@
                               
 
 
-    <div class="blog-post">
+   <h2 class="collection-title">2020/4</h2>
+
+
+
+       <section class="archives-wrap">
+         <div class="archive-year-wrap">
+           <div class="year-wrap">
+             <a href="/archives/2020" class="archive-year">2020</a>
+           </div>
+         </div>
+         <div class="timeline">
+           <div class="timeline-head"></div>
+           <div class="timeline-tail"></div>
+         </div>
+         <div class="archives">
+      
+        <div class="blog-post post-archive">
     <!-- Title -->
     <div class="blog-header">
-      <h2 class="blog-post-title">
+      <span class="blog-post-title">
           <a href="/2020/hello-world/">
               Hello World
           </a>
-      </h2>
+      </span>
       <!-- Date and Author -->
       <div class="blog-post-meta">
           <span class="blog-date">2020-04-24</span>
@@ -261,248 +277,9 @@
 </span>
       </div>
     </div>
+  </div>
 
-    <!-- Content -->
-    <div class="blog-content-wrapper">
-        <div class="blog-content">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-        <!-- Only display the Read More link if we are displaying an excerpt -->
-        
-            <span class="read-more">
-                <a href="/2020/hello-world/">
-                    Read More
-                </a>
-            </span>
-        
-      </div>
-    </div>
-
-</div>
-
-
-    <div class="blog-post">
-    <!-- Title -->
-    <div class="blog-header">
-      <h2 class="blog-post-title">
-          <a href="/2018/debugging-mocha-setup-for-vue-project/">
-              Debugging Mocha Setup for Vue Project
-          </a>
-      </h2>
-      <!-- Date and Author -->
-      <div class="blog-post-meta">
-          <span class="blog-date">2018-09-08</span>
-          
-      </div>
-      <div class="blog-post-additional">
-          <span class="blog-tags">
-
-<div class="blog-tags-container">
-    <span class="glyphicon glyphicon-tags"></span>
-    <a href="/tags/vue/">Vue</a> <a href="/tags/webpack/">Webpack</a> <a href="/tags/babel/">Babel</a> <a href="/tags/mocha/">Mocha</a> <a href="/tags/unit-test/">unit test</a> <a href="/tags/debug/">debug</a>
-</div>
-
-</span>
-          <span class="blog-cats">
-</span>
-      </div>
-    </div>
-
-    <!-- Content -->
-    <div class="blog-content-wrapper">
-        <div class="blog-content">
-        <p>I am working on a Vue project with Webpack 4 and Babel 7.</p>
-<p>At the point of writing this post, they are Webpack 4.12.0 and Babel 7.0.0-rc.1.</p>
-<p>When setting up Mocha with <code>@vue/test-util</code>, I have encountered a number of bugs.</p>
-<p>After a number of rounds try, my test script in <code>package.json</code> becomes:</p>
-<pre><code>&quot;scripts&quot;: {
-    &quot;test&quot;: &quot;cross-env NODE_ENV=test nyc mocha-webpack --full-trace --recursive --require @babel/register --require ignore-styles --require test/setup.js test/**/*.spec.js&quot;
-}
-</code></pre><p>Is it necessary or overkill? Will all the additional flags be the solution to problems, or the cause of new errors?</p>
-<p>Probably yes.</p>
-        <!-- Only display the Read More link if we are displaying an excerpt -->
-        
-            <span class="read-more">
-                <a href="/2018/debugging-mocha-setup-for-vue-project/">
-                    Read More
-                </a>
-            </span>
-        
-      </div>
-    </div>
-
-</div>
-
-
-    <div class="blog-post">
-    <!-- Title -->
-    <div class="blog-header">
-      <h2 class="blog-post-title">
-          <a href="/2018/styles-consolidation-among-iview-less-scss-in-vue-templates-and-javascript/">
-              Styles Consolidation Among iView Less, Scss in Vue Templates and JavaScript
-          </a>
-      </h2>
-      <!-- Date and Author -->
-      <div class="blog-post-meta">
-          <span class="blog-date">2018-09-06</span>
-          
-      </div>
-      <div class="blog-post-additional">
-          <span class="blog-tags">
-
-<div class="blog-tags-container">
-    <span class="glyphicon glyphicon-tags"></span>
-    <a href="/tags/vue/">Vue</a> <a href="/tags/webpack/">Webpack</a> <a href="/tags/iview/">iView</a> <a href="/tags/less/">less</a> <a href="/tags/sass/">sass</a> <a href="/tags/scss/">scss</a> <a href="/tags/loader/">loader</a> <a href="/tags/stylesheets/">stylesheets</a>
-</div>
-
-</span>
-          <span class="blog-cats">
-</span>
-      </div>
-    </div>
-
-    <!-- Content -->
-    <div class="blog-content-wrapper">
-        <div class="blog-content">
-        <h3 id="0x00-SCSS-Variables"><a href="#0x00-SCSS-Variables" class="headerlink" title="0x00: SCSS Variables"></a>0x00: SCSS Variables</h3><p>In a Vue template file, say <code>sample.vue</code>, I can define variables in the <code>scss</code> styles. In this way, I can reuse it across the <code>scss</code> in this template file:</p>
-<pre><code class="html">&lt;template&gt;
-    &lt;!-- my virtual DOMs --&gt;
-&lt;/template&gt;
-&lt;style lang=&quot;scss&quot;&gt;
-    $my-color: #fcfcfc;
-    .my-class{
-        color: $my-color;
-    }
-&lt;/style&gt;
-&lt;script&gt;
-    // my JavaScript
-&lt;/script&gt;
-</code></pre>
-        <!-- Only display the Read More link if we are displaying an excerpt -->
-        
-            <span class="read-more">
-                <a href="/2018/styles-consolidation-among-iview-less-scss-in-vue-templates-and-javascript/">
-                    Read More
-                </a>
-            </span>
-        
-      </div>
-    </div>
-
-</div>
-
-
-    <div class="blog-post">
-    <!-- Title -->
-    <div class="blog-header">
-      <h2 class="blog-post-title">
-          <a href="/2017/element-ui-el-table-problem-with-expandable-rows-being-used-together-with-fixed-columns/">
-              Element-UI El-Table: Problem With Expandable Rows Being Used Together With Fixed Columns
-          </a>
-      </h2>
-      <!-- Date and Author -->
-      <div class="blog-post-meta">
-          <span class="blog-date">2017-08-13</span>
-          
-      </div>
-      <div class="blog-post-additional">
-          <span class="blog-tags">
-
-<div class="blog-tags-container">
-    <span class="glyphicon glyphicon-tags"></span>
-    <a href="/tags/vue/">Vue</a> <a href="/tags/element-ui/">Element UI</a>
-</div>
-
-</span>
-          <span class="blog-cats">
-</span>
-      </div>
-    </div>
-
-    <!-- Content -->
-    <div class="blog-content-wrapper">
-        <div class="blog-content">
-        <p>The Table component from <a href="http://element.eleme.io" target="_blank" rel="noopener">Element</a>  (<code>el-table</code>) is very versatile in displaying tabulated data, with advanced functions such as fixed columns and expandable rows. However, the two don’t seem work well together.</p>
-        <!-- Only display the Read More link if we are displaying an excerpt -->
-        
-            <span class="read-more">
-                <a href="/2017/element-ui-el-table-problem-with-expandable-rows-being-used-together-with-fixed-columns/">
-                    Read More
-                </a>
-            </span>
-        
-      </div>
-    </div>
-
-</div>
-
-
-    <div class="blog-post">
-    <!-- Title -->
-    <div class="blog-header">
-      <h2 class="blog-post-title">
-          <a href="/2017/global-filters-for-vue/">
-              Global Custom Filters for Vue
-          </a>
-      </h2>
-      <!-- Date and Author -->
-      <div class="blog-post-meta">
-          <span class="blog-date">2017-07-19</span>
-          
-      </div>
-      <div class="blog-post-additional">
-          <span class="blog-tags">
-
-<div class="blog-tags-container">
-    <span class="glyphicon glyphicon-tags"></span>
-    <a href="/tags/vue/">Vue</a>
-</div>
-
-</span>
-          <span class="blog-cats">
-</span>
-      </div>
-    </div>
-
-    <!-- Content -->
-    <div class="blog-content-wrapper">
-        <div class="blog-content">
-        <p>It is very convenient to use filters in Vue. Custom filters can be defined in the <code>filters</code>, as below in the <code>export default</code> of a Vue single file component:</p>
-<pre><code class="javascript">export default{
-    data () {
-        return {
-        }
-    },
-
-    filters: {
-        //my filters
-    },
-
-    methods: {
-    },
-}
-</code></pre>
-        <!-- Only display the Read More link if we are displaying an excerpt -->
-        
-            <span class="read-more">
-                <a href="/2017/global-filters-for-vue/">
-                    Read More
-                </a>
-            </span>
-        
-      </div>
-    </div>
-
-</div>
-
-
-
-<nav>
-    <ul class="pager">
-        
-        
-    </ul>
-</nav>
-
+      
 
                           </div>
                        </div>
